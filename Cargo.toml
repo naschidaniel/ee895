@@ -1,0 +1,26 @@
+[package]
+authors = ["Daniel Naschberger <daniel@naschi.at>"]
+categories = ["embedded", "no-std"]
+description = "I2C driver for the EE895 CO2, Pressure and Temperature Sensor"
+documentation = "https://docs.rs/ee895"
+keywords = ["no-std", "ee895", "co2", "embedded", "embedded-hal-driver"]
+name = "ee895"
+version = "0.1.0"
+repository = "https://github.com/naschidaniel/ee895"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+embedded-hal = "0.2.7"
+
+[lib]
+name = "ee895"
+test = false
+bench = false
+
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
