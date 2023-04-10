@@ -9,14 +9,13 @@ version = "0.1.0"
 repository = "https://github.com/naschidaniel/ee895"
 edition = "2021"
 license = "MIT OR Apache-2.0"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+]
 
 [dependencies]
 embedded-hal = "0.2.7"
-
-[lib]
-name = "ee895"
-test = false
-bench = false
 
 [profile.release]
 opt-level = "s"
