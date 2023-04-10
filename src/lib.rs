@@ -1,8 +1,7 @@
 //! EE895 CO2, Pressure and Temperature driver.
 //!
 //! This crate provides a driver for the EE895 sensor. The CO2, temperature and pressure measurements can be from the sensor over I2C.
-//! The main driver is created using [`Ee895::new`] which accepts an interface instance, display
-//! size, rotation and mode. 
+//! The main driver is created using [`Ee895::new`] which accepts an I2C interface instance.
 //! 
 //! 
 #![deny(unsafe_code)]
